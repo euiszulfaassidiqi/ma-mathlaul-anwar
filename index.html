@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MA Mathlaul Anwar - Home</title>
+    
+    <!-- CSS Internal untuk Styling Dasar dan Responsif (termasuk Hero Background) -->
+    <style>
+        /* Reset dan Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+
+        /* Header dan Navbar */
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        .logo img {
+            height: 40px;
+            width: auto;
+            vertical-align: middle;
+        }
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        .nav-links li {
+            margin-left: 2rem;
+        }
+        .nav-links a {
+            color: white;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover { color: #3498db; }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: white;
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        /* Hero Section dengan Background Foto Inline */
+        .hero {
+            /* Background foto dengan overlay gelap */
+            background: 
+                linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url('upload.foto/WhatsApp Image 2025-10-06 at 11.03.36_f6287bfb.jpg') center/cover no-repeat; /* Ganti 'images/hero.jpg' dengan path gambar Anda */
+            
+            /* Fallback jika gambar tidak ada: Warna solid */
+            background-color: #2c3e50;
+            
+            /* Alternatif URL eksternal sementara (hapus jika pakai lokal): */
+            /* url('https://picsum.photos/1920/1080?random=1') atau 'https://via.placeholder.com/1920x1080/2c3e50/ffffff?text=Hero+MA+Mathlaul+Anwar' */
+            
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+        }
+        .hero button {
+            background: #3498db;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+            font-size: 1rem;
+        }
+        .hero button:hover { background: #2980b9; }
+
+        /* Main Content */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 6rem 2rem 2rem;
+        }
+        .section {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        .card {
+            background: #ecf0f1;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        button {
+            background: #3498db;
+            color: white;
+            padding: 1rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+            font-size: 1rem;
+        }
+        button:hover { background: #2980b9; }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        /* Responsif Mobile (≤768px) */
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                flex-direction: column;
+                background-color: #2c3e50;
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                padding: 2rem 0;
+            }
+            .nav-links.active { left: 0; }
+            .nav-links li { margin: 1rem 0; }
+            .hamburger { display: flex; }
+            .hero { height: 80vh; }
+            .hero h1 { font-size: 2rem; }
+            .hero p { font-size: 1rem; }
+            .logo img { height: 30px; }
+            main { padding: 5rem 1rem 1rem; }
+            .section { padding: 1rem; }
+            .grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <!-- Logo seperti kode Anda -->
+            <div class="logo">
+                <img src="upload.foto/yppma kdd.jpg" alt="Logo MA Mathlaul Anwar">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Tentang Kami</a></li>
+                <li><a href="programs.html">Program Studi</a></li>
+                <li><a href="facilities.html">Fasilitas</a></li>
+                <li><a href="gallery.html">Galeri</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section dengan Background Foto (Inline Style Sudah di CSS Internal) -->
+    <section class="hero">
+        <div>
+            <h1>Selamat Datang di MA Mathlaul Anwar</h1>
+            <p>Madrasah Aliyah unggulan dengan pendidikan Islam terintegrasi dan modern.</p>
+            <a href="about.html"><button>Lebih Lanjut</button></a>
+        </div>
+    </section>
+
+    <main>
+        <section class="section">
+            <h2>Berita Terbaru</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Penerimaan Siswa Baru 2024</h3>
+                    <p>PPDB dibuka mulai 1 Juni 2024. Daftar sekarang untuk masa depan cerah!</p>
+                </div>
+                <div class="card">
+                    <h3>Kegiatan Ekstrakurikuler</h3>
+                    <p>Rohis dan Pramuka sukses adakan kemah rohani bulan lalu.</p>
+                </div>
+                <div class="card">
+                    <h3>Prestasi Siswa</h3>
+                    <p>Siswa kami meraih juara 1 Olimpiade Sains Madrasah tingkat nasional.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Visi Kami</h2>
+            <p>Mencetak generasi muslim yang berilmu, berakhlak mulia, dan berkontribusi bagi umat dan bangsa.</p>
+            <a href="contact.html"><button>Hubungi Kami</button></a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 MA Mathlaul Anwar. Semua hak dilindungi.</p>
+    </footer>
+
+    <!-- Script Eksternal untuk Navbar Hamburger (jika ada) -->
+    <script src="script.js"></script>
+</body>
+</html>

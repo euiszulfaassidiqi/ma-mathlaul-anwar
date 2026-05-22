@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MA Mathlaul Anwar - Kontak Kami</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">MA Mathlaul Anwar</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Tentang Kami</a></li>
+                <li><a href="programs.html">Program Studi</a></li>
+                <li><a href="facilities.html">Fasilitas</a></li>
+                <li><a href="gallery.html">Galeri</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section">
+            <h2>Kontak Kami</h2>
+            <p>Kami siap menjawab pertanyaan Anda mengenai pendaftaran, program studi, atau fasilitas. Hubungi melalui form di bawah ini atau info kontak kami. Tim kami akan merespons dalam 24-48 jam.</p>
+            
+            <!-- Info Kontak -->
+            <h3 style="color: #2c3e50; margin-top: 2rem;">Informasi Kontak</h3>
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                <div class="card">
+                    <h4>Alamat Sekolah</h4>
+                    <p>Jl. Pendidikan Islam No. 123<br>Kedondong, Banyuwangi, Jawa Timur 68465</p>
+                    <p><strong>Telepon:</strong> (0333) 123456</p>
+                    <p><strong>Fax:</strong> (0333) 123457</p>
+                </div>
+                
+                <div class="card">
+                    <h4>Email dan Media Sosial</h4>
+                    <p><strong>Email:</strong> info@mamathlaul.com</p>
+                    <p><strong>Website:</strong> www.mamathlaul.com</p>
+                    <p><strong>Instagram:</strong> @mamathlaul_anwar</p>
+                    <p><strong>Facebook:</strong> /mamathlaul.anwar</p>
+                </div>
+                
+                <div class="card">
+                    <h4>Jam Operasional</h4>
+                    <p>Senin - Jumat: 07:30 - 15:00 WIB<br>Sabtu: 08:00 - 12:00 (kegiatan khusus)<br>Minggu: Tutup</p>
+                    <p><strong>Untuk PPDB:</strong> Hubungi 0812-3456-7890</p>
+                </div>
+            </div>
+            
+            <!-- Form Kontak -->
+            <h3 style="color: #2c3e50; margin-top: 2rem;">Kirim Pesan</h3>
+            <form id="contactForm">
+                <label for="nama">Nama Lengkap *</label>
+                <input type="text" id="nama" name="nama" required placeholder="Masukkan nama Anda">
+                
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required placeholder="contoh@email.com">
+                
+                <label for="subjek">Subjek *</label>
+                <select id="subjek" name="subjek" required>
+                    <option value="">Pilih Subjek</option>
+                    <option value="ppdb">Pendaftaran Siswa Baru (PPDB)</option>
+                    <option value="program">Informasi Program Studi</option>
+                    <option value="fasilitas">Fasilitas dan Kurikulum</option>
+                    <option value="lainnya">Lainnya</option>
+                </select>
+                
+                <label for="pesan">Pesan *</label>
+                <textarea id="pesan" name="pesan" rows="5" required placeholder="Tuliskan pertanyaan atau pesan Anda..."></textarea>
+                
+                <button type="submit">Kirim Pesan</button>
+            </form>
+            
+            <!-- Peta Lokasi -->
+            <h3 style="color: #2c3e50; margin-top: 3rem;">Lokasi Kami</h3>
+            <p>Temukan kami di peta berikut. Parkir luas tersedia untuk orang tua dan tamu.</p>
+            <div style="width: 100%; height: 400px; margin-top: 1rem; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.289999999999!2d114.123456!3d-8.123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOMKwMTEnMjAuNCJTIDExNMKwMDcnMjQuMSJF!5e0!3m2!1sid!2sid!4v1234567890" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            <p style="text-align: center; margin-top: 1rem; font-size: 0.9rem; color: #666;">
+                * Ganti embed code di atas dengan lokasi sekolah nyata via Google Maps.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 MA Mathlaul Anwar. Semua hak dilindungi. | Hubungi kami untuk info lebih lanjut.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
